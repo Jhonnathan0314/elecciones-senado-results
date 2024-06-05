@@ -16,6 +16,7 @@ public class PartyResponseMapper implements Mapper<PartyEntity, Party, PartyResp
                 .id(entity.getId())
                 .name(entity.getName())
                 .motto(entity.getMotto())
+                .logo(entity.getLogo())
                 .build();
     }
 
@@ -25,6 +26,7 @@ public class PartyResponseMapper implements Mapper<PartyEntity, Party, PartyResp
                 .id(model.getId())
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .build();
     }
 
@@ -34,6 +36,7 @@ public class PartyResponseMapper implements Mapper<PartyEntity, Party, PartyResp
                 .id(model.getId())
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .build();
     }
 
@@ -43,6 +46,7 @@ public class PartyResponseMapper implements Mapper<PartyEntity, Party, PartyResp
                 .id(dto.getId())
                 .name(dto.getName())
                 .motto(dto.getMotto())
+                .logo(dto.getLogo())
                 .build();
     }
 

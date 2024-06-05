@@ -28,6 +28,9 @@ public class PartyEntity {
     @Column(name = "motto")
     private String motto;
 
+    @Column(name = "logo")
+    private String logo;
+
     @CreationTimestamp
     @Column(name = "creation_date", updatable = false)
     private Timestamp creationDate;
@@ -40,6 +43,9 @@ public class PartyEntity {
     private String state;
 
     @PrePersist
-    protected void onCreate() { this.state = "active"; }
+    protected void onCreate() {
+        this.state = "active";
+        this.logo = "default.png";
+    }
 
 }

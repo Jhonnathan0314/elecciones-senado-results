@@ -17,6 +17,7 @@ public class Party {
     private Long id;
     private String name;
     private String motto;
+    private String logo;
     private Timestamp creationDate;
     private Timestamp updateDate;
     private String state;

@@ -14,6 +14,7 @@ public class PartyUpdateDTO {
     private Long id;
     private String name;
     private String motto;
+    private String logo;
     private String state;
 
 }

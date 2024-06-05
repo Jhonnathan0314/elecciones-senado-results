@@ -16,6 +16,7 @@ public class PartyUpdateMapper implements Mapper<PartyEntity, Party, PartyUpdate
                 .id(entity.getId())
                 .name(entity.getName())
                 .motto(entity.getMotto())
+                .logo(entity.getLogo())
                 .state(entity.getState())
                 .build();
     }
@@ -26,6 +27,7 @@ public class PartyUpdateMapper implements Mapper<PartyEntity, Party, PartyUpdate
                 .id(model.getId())
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .state(model.getState())
                 .build();
     }
@@ -36,6 +38,7 @@ public class PartyUpdateMapper implements Mapper<PartyEntity, Party, PartyUpdate
                 .id(model.getId())
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .state(model.getState())
                 .build();
     }
@@ -46,6 +49,7 @@ public class PartyUpdateMapper implements Mapper<PartyEntity, Party, PartyUpdate
                 .id(dto.getId())
                 .name(dto.getName())
                 .motto(dto.getMotto())
+                .logo(dto.getLogo())
                 .state(dto.getState())
                 .build();
     }

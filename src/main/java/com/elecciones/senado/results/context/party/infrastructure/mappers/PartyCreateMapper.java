@@ -15,6 +15,7 @@ public class PartyCreateMapper implements Mapper<PartyEntity, Party, PartyCreate
         return Party.builder()
                 .name(entity.getName())
                 .motto(entity.getMotto())
+                .logo(entity.getLogo())
                 .build();
     }
 
@@ -23,6 +24,7 @@ public class PartyCreateMapper implements Mapper<PartyEntity, Party, PartyCreate
         return PartyEntity.builder()
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .build();
     }
 
@@ -31,6 +33,7 @@ public class PartyCreateMapper implements Mapper<PartyEntity, Party, PartyCreate
         return PartyCreateDTO.builder()
                 .name(model.getName())
                 .motto(model.getMotto())
+                .logo(model.getLogo())
                 .build();
     }
 
@@ -39,6 +42,7 @@ public class PartyCreateMapper implements Mapper<PartyEntity, Party, PartyCreate
         return Party.builder()
                 .name(dto.getName())
                 .motto(dto.getMotto())
+                .logo(dto.getLogo())
                 .build();
     }
 

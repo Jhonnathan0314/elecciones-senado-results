@@ -14,5 +14,6 @@ public class PartyDTO {
     private Long id;
     private String name;
     private String motto;
+    private String logo;
 
 }

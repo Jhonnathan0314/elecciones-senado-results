@@ -13,5 +13,6 @@ public class PartyCreateDTO {
 
     private String name;
     private String motto;
+    private String logo;
 
 }
