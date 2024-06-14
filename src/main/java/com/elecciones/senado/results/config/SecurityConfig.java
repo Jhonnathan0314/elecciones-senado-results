@@ -36,7 +36,7 @@ public class SecurityConfig {
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
         configuration.setAllowedHeaders(Arrays.asList("Accept", "Content-Type", "Authorization", "From-Official-Page"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/api/security/**", configuration);
+        source.registerCorsConfiguration("**", configuration);
         return source;
     }
 
