@@ -5,11 +5,13 @@ import com.elecciones.senado.results.utils.messages.ErrorMessage;
 import org.springframework.http.HttpStatus;
 
 public class HttpUtils {
+
     public HttpStatus determineHttpStatus(Exception e) {
         if (e instanceof DuplicatedException) return HttpStatus.CONFLICT;
         if (e instanceof InvalidBodyException || e instanceof NoIdReceivedException) return HttpStatus.BAD_REQUEST;
         if (e instanceof NoChangesException) return HttpStatus.NOT_ACCEPTABLE;
         if (e instanceof NonExistenceException | e instanceof NoResultsException) return HttpStatus.NOT_FOUND;
+        if (e instanceof CommunicationErrorException) return HttpStatus.SERVICE_UNAVAILABLE;
         return HttpStatus.INTERNAL_SERVER_ERROR;
     }
 
@@ -26,6 +28,7 @@ public class HttpUtils {
         if (e instanceof InvalidBodyException || e instanceof NoIdReceivedException) return HttpStatus.BAD_REQUEST.value();
         if (e instanceof NoChangesException) return HttpStatus.NOT_ACCEPTABLE.value();
         if (e instanceof NonExistenceException | e instanceof NoResultsException) return HttpStatus.NOT_FOUND.value();
+        if (e instanceof CommunicationErrorException) return HttpStatus.SERVICE_UNAVAILABLE.value();
         return HttpStatus.INTERNAL_SERVER_ERROR.value();
     }
 
@@ -34,6 +37,7 @@ public class HttpUtils {
         if (e instanceof InvalidBodyException || e instanceof NoIdReceivedException) return HttpStatus.BAD_REQUEST.name();
         if (e instanceof NoChangesException) return HttpStatus.NOT_ACCEPTABLE.name();
         if (e instanceof NonExistenceException | e instanceof NoResultsException) return HttpStatus.NOT_FOUND.name();
+        if (e instanceof CommunicationErrorException) return HttpStatus.SERVICE_UNAVAILABLE.name();
         return HttpStatus.INTERNAL_SERVER_ERROR.name();
     }
 }
