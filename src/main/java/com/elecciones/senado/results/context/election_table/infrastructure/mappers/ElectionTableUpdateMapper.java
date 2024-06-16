@@ -16,6 +16,7 @@ public class ElectionTableUpdateMapper implements Mapper<ElectionTableEntity, El
                 .id(entity.getId())
                 .numberIds(entity.getNumberIds())
                 .totalVotes(entity.getTotalVotes())
+                .location(entity.getLocation())
                 .updateDate(entity.getUpdateDate())
                 .state(entity.getState())
                 .build();
@@ -27,6 +28,7 @@ public class ElectionTableUpdateMapper implements Mapper<ElectionTableEntity, El
                 .id(model.getId())
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .updateDate(model.getUpdateDate())
                 .state(model.getState())
                 .build();
@@ -38,6 +40,7 @@ public class ElectionTableUpdateMapper implements Mapper<ElectionTableEntity, El
                 .id(model.getId())
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .state(model.getState())
                 .build();
     }
@@ -48,6 +51,7 @@ public class ElectionTableUpdateMapper implements Mapper<ElectionTableEntity, El
                 .id(dto.getId())
                 .numberIds(dto.getNumberIds())
                 .totalVotes(dto.getTotalVotes())
+                .location(dto.getLocation())
                 .state(dto.getState())
                 .build();
     }

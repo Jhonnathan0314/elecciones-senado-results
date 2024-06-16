@@ -15,6 +15,7 @@ public class ElectionTableCreateMapper implements Mapper<ElectionTableEntity, El
         return ElectionTable.builder()
                 .numberIds(entity.getNumberIds())
                 .totalVotes(entity.getTotalVotes())
+                .location(entity.getLocation())
                 .build();
     }
 
@@ -23,6 +24,7 @@ public class ElectionTableCreateMapper implements Mapper<ElectionTableEntity, El
         return ElectionTableEntity.builder()
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .build();
     }
 
@@ -31,6 +33,7 @@ public class ElectionTableCreateMapper implements Mapper<ElectionTableEntity, El
         return ElectionTableCreateDTO.builder()
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .build();
     }
 
@@ -39,6 +42,7 @@ public class ElectionTableCreateMapper implements Mapper<ElectionTableEntity, El
         return ElectionTable.builder()
                 .numberIds(dto.getNumberIds())
                 .totalVotes(dto.getTotalVotes())
+                .location(dto.getLocation())
                 .build();
     }
 

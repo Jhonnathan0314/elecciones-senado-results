@@ -14,5 +14,6 @@ public class ElectionTableDTO {
     private Long id;
     private Long numberIds;
     private Long totalVotes;
+    private String location;
 
 }

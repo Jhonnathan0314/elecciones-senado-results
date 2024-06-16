@@ -17,12 +17,16 @@ public class ElectionTable {
     private Long id;
     private Long numberIds;
     private Long totalVotes;
+    private String location;
     private Timestamp creationDate;
     private Timestamp updateDate;
     private String state;
 
     public boolean isValid(ElectionTable electionTable) {
-        return electionTable.getNumberIds() != null && electionTable.getTotalVotes() != null;
+        if(electionTable.getNumberIds() == null ||
+                electionTable.getTotalVotes() == null ||
+                electionTable.getLocation() == null) return false;
+        return !electionTable.getLocation().isEmpty();
     }
 
     @Override

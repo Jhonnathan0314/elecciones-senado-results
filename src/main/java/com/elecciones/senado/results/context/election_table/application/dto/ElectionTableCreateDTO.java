@@ -13,5 +13,6 @@ public class ElectionTableCreateDTO {
 
     private Long numberIds;
     private Long totalVotes;
+    private String location;
 
 }

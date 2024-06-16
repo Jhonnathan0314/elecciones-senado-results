@@ -28,6 +28,9 @@ public class ElectionTableEntity {
     @Column(name = "total_votes")
     private Long totalVotes;
 
+    @Column(name = "location")
+    private String location;
+
     @CreationTimestamp
     @Column(name = "creation_date", updatable = false)
     private Timestamp creationDate;

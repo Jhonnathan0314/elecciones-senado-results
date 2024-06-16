@@ -16,6 +16,7 @@ public class ElectionTableResponseMapper implements Mapper<ElectionTableEntity, 
                 .id(entity.getId())
                 .numberIds(entity.getNumberIds())
                 .totalVotes(entity.getTotalVotes())
+                .location(entity.getLocation())
                 .build();
     }
 
@@ -25,6 +26,7 @@ public class ElectionTableResponseMapper implements Mapper<ElectionTableEntity, 
                 .id(model.getId())
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .build();
     }
 
@@ -34,6 +36,7 @@ public class ElectionTableResponseMapper implements Mapper<ElectionTableEntity, 
                 .id(model.getId())
                 .numberIds(model.getNumberIds())
                 .totalVotes(model.getTotalVotes())
+                .location(model.getLocation())
                 .build();
     }
 
@@ -43,6 +46,7 @@ public class ElectionTableResponseMapper implements Mapper<ElectionTableEntity, 
                 .id(dto.getId())
                 .numberIds(dto.getNumberIds())
                 .totalVotes(dto.getTotalVotes())
+                .location(dto.getLocation())
                 .build();
     }
 
