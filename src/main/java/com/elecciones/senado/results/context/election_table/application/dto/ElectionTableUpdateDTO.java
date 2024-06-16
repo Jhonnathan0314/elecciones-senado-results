@@ -14,7 +14,7 @@ public class ElectionTableUpdateDTO {
     private Long id;
     private Long numberIds;
     private Long totalVotes;
-    private String location;
+    private Long cityId;
     private String state;
 
 }
