@@ -33,12 +33,12 @@ public class ElectionTable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ElectionTable electionTable = (ElectionTable) o;
-        return Objects.equals(getNumberIds(), electionTable.getNumberIds()) && Objects.equals(getTotalVotes(), electionTable.getTotalVotes());
+        return Objects.equals(getNumberIds(), electionTable.getNumberIds()) && Objects.equals(getTotalVotes(), electionTable.getTotalVotes()) && Objects.equals(getCityId(), electionTable.getCityId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getNumberIds(), getTotalVotes());
+        return Objects.hash(getNumberIds(), getTotalVotes(), getCityId());
     }
 
     @Override
