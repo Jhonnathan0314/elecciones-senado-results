@@ -27,7 +27,6 @@ public class ApiAdapter implements DepartmentRepository {
     @Override
     public List<Department> findAll() throws NoResultsException, CommunicationErrorException {
         try {
-            System.out.println("Entre a findAll adapter");
             ResponseEntity<List<Department>> response = restTemplate.exchange(
                     apiColombiaUrl + "/Department",
                     HttpMethod.GET,
