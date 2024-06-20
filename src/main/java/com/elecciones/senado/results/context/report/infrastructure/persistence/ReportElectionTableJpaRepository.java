@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
 
-public interface ReportJpaRepository extends JpaRepository<ReportEntity, BigDecimal> {
+public interface ReportElectionTableJpaRepository extends JpaRepository<ReportElectionTableEntity, BigDecimal> {
 }
